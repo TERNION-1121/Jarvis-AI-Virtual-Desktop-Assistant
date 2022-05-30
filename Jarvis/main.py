@@ -6,7 +6,7 @@ import webbrowser
 import os
 import smtplib
 
-MASTER = "your_name"
+MASTER = "ternion"
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -94,7 +94,7 @@ def main():
         webbrowser.open("https://www.reddit.com")
 
     elif 'play music' in query:
-        songs_dir = "music_directory's_file_location_here"
+        songs_dir = "E:\Music"
         songs = os.listdir(songs_dir)
         print(songs)
         os.startfile(os.path.join(songs_dir, songs[0]))
@@ -104,7 +104,7 @@ def main():
         speak(f"{MASTER} the time is {strTime}")
 
     elif 'open code' in query:
-        codePath = "vs_code's_file_location"
+        codePath = "C:\\Users\\iBall\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
         os.startfile(codePath)
 
     # elif logic to use the send email functionality
